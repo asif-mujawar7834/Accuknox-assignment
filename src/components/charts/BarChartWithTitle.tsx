@@ -7,8 +7,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { BarChartWithTitleProps } from "../../types";
 import { NoGraphData } from "../NoGraphData";
+import { BarChartWithTitleProps } from "../../types";
 
 export const BarChartWithTitle: FC<BarChartWithTitleProps> = ({
   title,

@@ -10,7 +10,7 @@ export const CloudMisConfigurations = () => {
   return (
     <PieChartWithLegend
       data={data}
-      title="Cloud Accounts"
+      title="Cloud Resource Misconfiguration"
       colors={COLORS}
       total={4531}
     />

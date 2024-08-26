@@ -12,7 +12,7 @@ export const CloudAccounts = () => {
   return (
     <PieChartWithLegend
       data={data}
-      title="Cloud Accounts"
+      title="Cloud Account"
       colors={COLORS}
       total={9659}
     />

@@ -11,7 +11,7 @@ export const ComplianceCheck = () => {
   return (
     <PieChartWithLegend
       data={data}
-      title="Cloud Accounts"
+      title="Compliance Check"
       colors={COLORS}
       total={2583}
     />

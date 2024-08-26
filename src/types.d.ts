@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { ComponentType } from "react";
 
 interface widgetType {
   id: number;
   name: string;
-  Component: FC;
+  Component: string;
   isActive: boolean;
 }
 
@@ -14,6 +14,7 @@ interface categoryType {
 }
 
 interface dashboardInitialStateType {
+  searchQuery: string;
   categories: categoryType[];
   isCanvasOpen: boolean;
 }
@@ -45,4 +46,8 @@ interface SingleLineIndicatorProps {
     id: number;
     count: number;
   }[];
+}
+
+interface WidgetComponents {
+  [key: string]: ComponentType;
 }

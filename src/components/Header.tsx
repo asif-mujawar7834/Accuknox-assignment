@@ -2,9 +2,12 @@ import { FaAngleRight, FaBell, FaSearch, FaTimes } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../hooks/useScreenSize";
+import { useAppDispatch } from "../redux/Store";
+import { setSearchQuery } from "../redux/reducers/dashboardslice";
 
 export const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const dispatch = useAppDispatch();
   const { width } = useScreenSize();
 
   useEffect(() => {
@@ -12,7 +15,7 @@ export const Header = () => {
   }, [width < 1024]);
 
   return (
-    <div className="bg-white sticky top-0 z-20">
+    <div className="bg-white sticky top-0 z-20 shadow-md">
       <div className="p-4 md:px-10 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span>Home</span>
@@ -31,6 +34,7 @@ export const Header = () => {
             <input
               placeholder="search anything here..."
               className="w-full bg-transparent outline-none"
+              onChange={(e) => dispatch(setSearchQuery(e.target.value))}
             />
           </div>
           <button

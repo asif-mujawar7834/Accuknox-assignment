@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from "recharts";
-import { PieChartWithLegendProps } from "../../types";
 import CustomPieLabel from "../CustomGraphLabel";
+import { PieChartWithLegendProps } from "../../types";
 
 export const PieChartWithLegend: FC<PieChartWithLegendProps> = ({
   data,
