@@ -24,7 +24,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
             className={`h-6`}
             style={{
               width: `${(item.count / total) * 100}%`,
-              background: colors[item.name],
+              background: colors[item.name as keyof typeof colors],
             }}
           ></div>
         ))}
@@ -34,7 +34,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
           <div className="flex items-center gap-2" key={d.name}>
             <div
               className={`h-5 w-5 rounded-md`}
-              style={{ background: colors[d.name] }}
+              style={{ background: colors[d.name as keyof typeof colors] }}
             ></div>
             <span className="font-semibold text-black">
               {d.name} ({d.count})
