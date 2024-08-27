@@ -20,7 +20,7 @@ export const Header = () => {
         <div className="flex items-center gap-2">
           <span>Home</span>
           <FaAngleRight />
-          <span className="text-blue-500 font-semibold">Dashboard v2</span>
+          <span className="text-blue-500 font-semibold">Dashboard V2</span>
         </div>
         <div
           className={`${
