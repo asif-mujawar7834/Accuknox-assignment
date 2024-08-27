@@ -21,7 +21,7 @@ export const OffCanvas = () => {
     dispatch(updateWidgets(widgetsToBeRemoved));
     dispatch(
       setToast({
-        id: Date.now,
+        id: Date.now.toString(),
         message: "Widgets updated successfully",
         type: "success",
       })

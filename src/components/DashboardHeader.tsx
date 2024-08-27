@@ -39,7 +39,10 @@ export const DashboardHeader = () => {
       >
         <button
           className="border border-gray-300 flex items-center gap-2 bg-white rounded-md py-2 px-4 font-semibold text-sm duration-300 hover:bg-blue-500 hover:text-white"
-          onClick={handleCanvas}
+          onClick={() => {
+            setShowMobileButton(false);
+            handleCanvas();
+          }}
         >
           Add Widget
           <FaPlus />
