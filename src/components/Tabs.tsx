@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { categoryType } from "../types";
-import { useAppDispatch } from "../redux/Store";
-import { addOrRemoveWidget } from "../redux/reducers/dashboardslice";
+import { useAppDispatch, useAppSelector } from "../redux/Store";
+import { setWidgetsToBeRemoved } from "../redux/reducers/dashboardslice";
 
 export const Tabs = ({ categories }: { categories: categoryType[] }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const { widgetsToBeRemoved } = useAppSelector((state) => state.dashboard);
   const dispatch = useAppDispatch();
 
   const toggleWidgets = (
@@ -12,7 +13,9 @@ export const Tabs = ({ categories }: { categories: categoryType[] }) => {
     widgetId: number,
     isActive: boolean
   ) => {
-    dispatch(addOrRemoveWidget({ categoryId, widgetId, isActive: !isActive }));
+    dispatch(
+      setWidgetsToBeRemoved({ categoryId, widgetId, isActive: !isActive })
+    );
   };
 
   return (
@@ -33,7 +36,7 @@ export const Tabs = ({ categories }: { categories: categoryType[] }) => {
         ))}
       </div>
       <div className="p-4 flex flex-col gap-4">
-        {categories[activeTab]?.widgets.map((widget) => (
+        {widgetsToBeRemoved[activeTab]?.widgets.map((widget) => (
           <div
             className="border border-gray-400 p-2 rounded-md flex items-center gap-3"
             key={widget.id}

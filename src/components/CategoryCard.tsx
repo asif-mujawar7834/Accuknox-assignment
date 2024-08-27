@@ -3,6 +3,7 @@ import { componentMapping } from "../constants";
 import {
   addOrRemoveWidget,
   hideOrShowCanvas,
+  setWidgetsToBeRemoved,
 } from "../redux/reducers/dashboardslice";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { categoryType } from "../types";
@@ -20,6 +21,13 @@ export const CategoryCard = ({ category }: { category: categoryType }) => {
   ) => {
     dispatch(
       addOrRemoveWidget({
+        categoryId: categoryId,
+        widgetId: widgetId,
+        isActive: isActive,
+      })
+    );
+    dispatch(
+      setWidgetsToBeRemoved({
         categoryId: categoryId,
         widgetId: widgetId,
         isActive: isActive,

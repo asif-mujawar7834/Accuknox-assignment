@@ -1,14 +1,23 @@
-import { hideOrShowCanvas } from "../redux/reducers/dashboardslice";
+import {
+  hideOrShowCanvas,
+  resetWidgetsToBeRemoved,
+  updateWidgets,
+} from "../redux/reducers/dashboardslice";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
 import { Tabs } from "./Tabs";
 
 export const OffCanvas = () => {
-  const { isCanvasOpen, categories } = useAppSelector(
+  const { isCanvasOpen, categories, widgetsToBeRemoved } = useAppSelector(
     (state) => state.dashboard
   );
   const dispatch = useAppDispatch();
   const toggleCanvas = () => {
+    dispatch(resetWidgetsToBeRemoved());
     dispatch(hideOrShowCanvas(!isCanvasOpen));
+  };
+
+  const handleConfirm = () => {
+    dispatch(updateWidgets(widgetsToBeRemoved));
   };
   return (
     <div
@@ -47,7 +56,7 @@ export const OffCanvas = () => {
           </button>
           <button
             className="border-2 bg-[#102C57] text-white text-sm font-semibold py-3 px-10 rounded-md"
-            onClick={toggleCanvas}
+            onClick={handleConfirm}
           >
             Confirm
           </button>

@@ -17,6 +17,7 @@ interface dashboardInitialStateType {
   searchQuery: string;
   categories: categoryType[];
   isCanvasOpen: boolean;
+  widgetsToBeRemoved: categoryType[];
 }
 
 type CustomLabelProps = LabelProps & {
