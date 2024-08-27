@@ -15,13 +15,14 @@ export const Dashboard = () => {
       <div className="p-4 md:p-10 text-black mt-4">
         <DashboardHeader />
         {categories.map((category) => {
+          const searchText = searchQuery.toLowerCase();
           const filteredWidgets = category.widgets.filter(
             (widget) =>
-              widget.isActive && widget.name.toLowerCase().includes(searchQuery)
+              widget.isActive && widget.name.toLowerCase().includes(searchText)
           );
 
           if (filteredWidgets.length > 0) {
-            return <CategoryCard category={category} />;
+            return <CategoryCard category={category} key={category.id} />;
           } else {
             return null;
           }

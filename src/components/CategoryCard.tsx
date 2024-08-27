@@ -41,7 +41,9 @@ export const CategoryCard = ({ category }: { category: categoryType }) => {
           .filter(
             (widget) =>
               widget.isActive &&
-              widget.name.toLocaleLowerCase().includes(searchQuery)
+              widget.name
+                .toLocaleLowerCase()
+                .includes(searchQuery.toLowerCase())
           )
           .map((widget) => {
             const Component = componentMapping[widget.Component];
