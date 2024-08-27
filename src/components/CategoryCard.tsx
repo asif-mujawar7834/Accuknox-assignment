@@ -44,7 +44,7 @@ export const CategoryCard = ({ category }: { category: categoryType }) => {
       <h1 className="text-black font-bold text-lg sm:text-xl mb-2">
         {category.name}
       </h1>
-      <div className="bg-[#ebf0f5] sm:auto-rows-[300px] w-full p-2 sm:p-4 gap-4 grid grid-cols-auto-fill sm:grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] lg:grid-cols-[repeat(auto-fill,_minmax(430px,_1fr))] rounded-md">
+      <div className="bg-[#ebf0f5] sm:auto-rows-[300px] w-full p-2 sm:p-4 gap-4 grid grid-cols-auto-fill sm:grid-cols-[repeat(auto-fill,_minmax(430px,_1fr))] lg:grid-cols-[repeat(auto-fill,_minmax(430px,_1fr))] rounded-md">
         {category.widgets
           .filter(
             (widget) =>
