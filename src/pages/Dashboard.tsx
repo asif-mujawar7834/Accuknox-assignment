@@ -21,11 +21,9 @@ export const Dashboard = () => {
               widget.isActive && widget.name.toLowerCase().includes(searchText)
           );
 
-          if (filteredWidgets.length > 0) {
-            return <CategoryCard category={category} key={category.id} />;
-          } else {
-            return null;
-          }
+          return filteredWidgets.length > 0 || !searchQuery ? (
+            <CategoryCard category={category} key={category.id} />
+          ) : null;
         })}
         {categories.every(
           (category) =>

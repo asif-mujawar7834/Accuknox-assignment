@@ -61,7 +61,7 @@ export const CategoryCard = ({ category }: { category: categoryType }) => {
                 className="bg-white rounded-md p-1 sm:p-3 relative group"
               >
                 <button
-                  className="absolute text-black text-2xl top-4 right-4 sm:top-5 sm:right-5 duration-300 rounded-full h-[30px] w-[30px] hover:bg-red-600 hover:text-white p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-30"
+                  className="absolute text-black text-2xl top-4 right-4 sm:top-5 sm:right-5 duration-300 rounded-full h-[30px] w-[30px] hover:bg-red-600 hover:text-white p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20"
                   onClick={() => removeWidget(category.id, widget.id, false)}
                 >
                   <span

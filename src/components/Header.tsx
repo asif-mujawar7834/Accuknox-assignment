@@ -15,7 +15,7 @@ export const Header = () => {
   }, [width < 1024]);
 
   return (
-    <div className="bg-white sticky top-0 z-20 shadow-md">
+    <div className="bg-white sticky top-0 z-30 shadow-md">
       <div className="p-4 md:px-10 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span>Home</span>

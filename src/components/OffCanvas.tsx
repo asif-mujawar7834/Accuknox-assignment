@@ -30,7 +30,7 @@ export const OffCanvas = () => {
 
   return (
     <div
-      className={`bg-gray-500/50 duration-300 h-full fixed right-0 top-0 z-20 ${
+      className={`bg-gray-500/50 duration-300 h-full fixed right-0 top-0 z-40 ${
         isCanvasOpen ? "w-full" : "w-0"
       }`}
       onClick={(e) => {
