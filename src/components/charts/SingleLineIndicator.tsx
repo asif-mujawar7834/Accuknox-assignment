@@ -36,7 +36,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
               className={`h-5 w-5 rounded-md`}
               style={{ background: colors[d.name as keyof typeof colors] }}
             ></div>
-            <span className="font-semibold text-black">
+            <span className="font-semibold text-[#3C3D37]">
               {d.name} ({d.count})
             </span>
           </div>

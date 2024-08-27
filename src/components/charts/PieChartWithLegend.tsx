@@ -51,7 +51,7 @@ export const PieChartWithLegend: FC<PieChartWithLegendProps> = ({
                   className={`h-5 w-5 rounded-md`}
                   style={{ background: d.bg }}
                 ></div>
-                <span className="font-semibold">
+                <span className="font-semibold text-[#3C3D37]">
                   {d.name} ({d.value})
                 </span>
               </div>
