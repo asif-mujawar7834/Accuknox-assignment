@@ -29,7 +29,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
           ></div>
         ))}
       </div>
-      <div className="grid grid-cols-2 mt-5 gap-4">
+      <div className="grid grid-cols-2 mt-5 gap-4 text-sm">
         {data.map((d) => (
           <div className="flex items-center gap-2" key={d.name}>
             <div
