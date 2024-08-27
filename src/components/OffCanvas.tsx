@@ -1,6 +1,7 @@
 import {
   hideOrShowCanvas,
   resetWidgetsToBeRemoved,
+  setToast,
   updateWidgets,
 } from "../redux/reducers/dashboardslice";
 import { useAppDispatch, useAppSelector } from "../redux/Store";
@@ -18,7 +19,15 @@ export const OffCanvas = () => {
 
   const handleConfirm = () => {
     dispatch(updateWidgets(widgetsToBeRemoved));
+    dispatch(
+      setToast({
+        id: Date.now,
+        message: "Widgets updated successfully",
+        type: "success",
+      })
+    );
   };
+
   return (
     <div
       className={`bg-gray-500/50 duration-300 h-full fixed right-0 top-0 z-20 ${

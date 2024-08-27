@@ -18,6 +18,11 @@ interface dashboardInitialStateType {
   categories: categoryType[];
   isCanvasOpen: boolean;
   widgetsToBeRemoved: categoryType[];
+  toast: {
+    id: number;
+    message: string;
+    type?: "success" | "error" | "info" | "warning";
+  } | null;
 }
 
 type CustomLabelProps = LabelProps & {

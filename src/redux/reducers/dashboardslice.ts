@@ -260,6 +260,7 @@ const initialState: dashboardInitialStateType = {
       ],
     },
   ],
+  toast: null,
 };
 
 const dashboardslice = createSlice({
@@ -316,6 +317,10 @@ const dashboardslice = createSlice({
       state.categories = action.payload;
       state.isCanvasOpen = false;
     },
+
+    setToast: (state, action) => {
+      state.toast = action.payload;
+    },
   },
 });
 
@@ -326,6 +331,7 @@ export const {
   setWidgetsToBeRemoved,
   updateWidgets,
   resetWidgetsToBeRemoved,
+  setToast,
 } = dashboardslice.actions;
 
 export default dashboardslice.reducer;
