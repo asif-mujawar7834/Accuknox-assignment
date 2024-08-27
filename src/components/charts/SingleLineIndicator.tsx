@@ -1,7 +1,10 @@
 import { FC } from "react";
 import { SingleLineIndicatorProps } from "../../types";
 
-export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
+export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({
+  data,
+  totalCount,
+}) => {
   const colors = {
     critical: "#c82819",
     high: "#6e0f0a",
@@ -13,8 +16,6 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
     ["in progress"]: "#f0c341",
   };
 
-  const total = data.reduce((sum, item) => sum + item.count, 0);
-
   return (
     <div>
       <div className="flex w-full rounded-full overflow-hidden">
@@ -23,7 +24,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
             key={item.id}
             className={`h-6`}
             style={{
-              width: `${(item.count / total) * 100}%`,
+              width: `${(item.value / totalCount) * 100}%`,
               background: colors[item.name as keyof typeof colors],
             }}
           ></div>
@@ -37,7 +38,7 @@ export const SingleLineIndicator: FC<SingleLineIndicatorProps> = ({ data }) => {
               style={{ background: colors[d.name as keyof typeof colors] }}
             ></div>
             <span className="font-semibold text-[#3C3D37]">
-              {d.name} ({d.count})
+              {d.name} ({d.value})
             </span>
           </div>
         ))}

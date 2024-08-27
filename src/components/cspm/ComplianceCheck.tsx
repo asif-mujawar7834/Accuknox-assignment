@@ -1,3 +1,4 @@
+import { getTotalCount } from "../../lib";
 import { PieChartWithLegend } from "../charts/PieChartWithLegend";
 
 const data = [
@@ -8,12 +9,13 @@ const data = [
 ];
 const COLORS = ["#021526", "#03346E", "#6EACDA", "#E2E2B6"];
 export const ComplianceCheck = () => {
+  const totalCount = getTotalCount({ data });
   return (
     <PieChartWithLegend
       data={data}
       title="Compliance Check"
       colors={COLORS}
-      total={2583}
+      total={totalCount}
     />
   );
 };

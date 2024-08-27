@@ -50,10 +50,18 @@ interface SingleLineIndicatorProps {
   data: {
     name: string;
     id: number;
-    count: number;
+    value: number;
   }[];
+  totalCount: number;
 }
 
 interface WidgetComponents {
   [key: string]: ComponentType;
+}
+
+interface totalCountProps {
+  id?: number;
+  name: string;
+  value: number;
+  bg?: string;
 }

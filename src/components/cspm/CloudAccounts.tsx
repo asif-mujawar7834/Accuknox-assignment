@@ -1,3 +1,4 @@
+import { getTotalCount } from "../../lib";
 import { PieChartWithLegend } from "../charts/PieChartWithLegend";
 
 const data = [
@@ -9,12 +10,13 @@ const data = [
 const COLORS = ["#FF0000", "#FABC3F", "#686D76", "#387F39"];
 
 export const CloudAccounts = () => {
+  const totalCount = getTotalCount({ data });
   return (
     <PieChartWithLegend
       data={data}
       title="Cloud Account"
       colors={COLORS}
-      total={9659}
+      total={totalCount}
     />
   );
 };

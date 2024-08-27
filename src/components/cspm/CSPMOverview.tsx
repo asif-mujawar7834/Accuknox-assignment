@@ -6,14 +6,16 @@ const data = [
   { name: "Info", value: 200, bg: "#254336" },
 ];
 const COLORS = ["#0D7C66", "#41B3A2", "#37B5B6", "#4CAF50", "#254336"];
+import { getTotalCount } from "../../lib";
 import { PieChartWithLegend } from "../charts/PieChartWithLegend";
 export const CSPMOverview = () => {
+  const totalCount = getTotalCount({ data });
   return (
     <PieChartWithLegend
       data={data}
       title="CSPM Overview"
       colors={COLORS}
-      total={3320}
+      total={totalCount}
     />
   );
 };
