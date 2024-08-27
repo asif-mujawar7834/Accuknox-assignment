@@ -58,7 +58,7 @@ export const OffCanvas = () => {
         <Tabs categories={categories} />
         <div className="mx-auto my-2 md:ml-auto md:m-4">
           <button
-            className="border-2 border-blue-400 text-sm font-semibold py-3 px-10 rounded-md mr-2"
+            className="border-2 border-[#102C57] text-sm font-semibold py-3 px-10 rounded-md mr-2"
             onClick={toggleCanvas}
           >
             Cancel
