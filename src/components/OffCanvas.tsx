@@ -30,7 +30,7 @@ export const OffCanvas = () => {
 
   return (
     <div
-      className={`bg-gray-500/50 duration-300 h-full fixed right-0 top-0 z-40 ${
+      className={`bg-gray-500/50 duration-300 h-full fixed right-0 top-0 z-50 ${
         isCanvasOpen ? "w-full" : "w-0"
       }`}
       onClick={(e) => {
@@ -55,6 +55,9 @@ export const OffCanvas = () => {
             </span>
           </button>
         </div>
+        <p className="mt-3 px-4">
+          Personalise your dashboard by adding the following widgets
+        </p>
         <Tabs categories={categories} />
         <div className="mx-auto my-2 md:ml-auto md:m-4">
           <button

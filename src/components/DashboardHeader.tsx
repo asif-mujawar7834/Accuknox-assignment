@@ -35,7 +35,7 @@ export const DashboardHeader = () => {
           showMobileButton
             ? "absolute md:flex flex-col"
             : "hidden md:flex flex-col md:w-max"
-        } top-[155px] rounded-md p-3 backdrop-blur-md md:top-auto md:p-0 right-4 md:right-auto z-10 md:z-auto bg-gray-300/30 flex flex-col md:bg-transparent md:relative md:flex-row items-center gap-4 text-gray-500`}
+        } top-[155px] rounded-md p-3 backdrop-blur-md md:top-auto md:p-0 right-4 md:right-auto z-30 md:z-auto bg-gray-400/30 flex flex-col md:bg-transparent md:relative md:flex-row items-center gap-4 text-gray-500`}
       >
         <button
           className="border border-gray-300 flex items-center gap-2 bg-white rounded-md py-2 px-4 font-semibold text-sm duration-300 hover:bg-blue-500 hover:text-white"
