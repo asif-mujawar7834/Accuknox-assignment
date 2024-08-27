@@ -32,7 +32,7 @@ export const Dashboard = () => {
             category.widgets.filter(
               (widget) =>
                 widget.isActive &&
-                widget.name.toLowerCase().includes(searchQuery)
+                widget.name.toLowerCase().includes(searchQuery.toLowerCase())
             ).length === 0
         ) && (
           <div className="text-center text-gray-500 mt-10 bg-white rounded-md py-6">
